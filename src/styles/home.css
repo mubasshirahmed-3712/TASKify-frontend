@@ -141,7 +141,7 @@ body {
 }
 
 /* Button Animation */
-.button25 {
+/* .button25 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,7 +190,7 @@ body {
 
 .button25:hover .play {
     transform: translateX(200%);
-}
+} */
 
 
 
@@ -327,10 +327,7 @@ body {
         padding: 8px;
     }
 
-    .button25 {
-        font-size: 14px;
-        /* padding: 8px; */
-    }
+    
 }
 
 @media screen and (max-width: 480px) {
@@ -357,8 +354,5 @@ body {
         font-size: 12px;
     }
 
-    .button25 {
-        font-size: 12px;
-        /* padding: 6px; */
-    }
+    
 }
