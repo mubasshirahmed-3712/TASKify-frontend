@@ -259,7 +259,7 @@ body {
 
     .button25 {
         font-size: 14px;
-        padding: 8px;
+        /* padding: 8px; */
     }
 }
 
@@ -289,6 +289,6 @@ body {
 
     .button25 {
         font-size: 12px;
-        padding: 6px;
+        /* padding: 6px; */
     }
 }
