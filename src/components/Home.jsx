@@ -21,7 +21,7 @@ function Home() {
             "Content-Type": "application/json",
           },
         });
-        console.log(response.data.todos);
+        // console.log(response.data.todos);
         setTodos(response.data.todos);
         setError(null);
       } catch (error) {
