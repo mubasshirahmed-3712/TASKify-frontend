@@ -30,7 +30,8 @@ function Login() {
       console.log(data);
       toast.success(data.message || "Login successful");
       localStorage.setItem("jwt", data.token);
-      navigateTo("/");
+      console.log("Redirecting to home...");
+      navigateTo("/signup");
 
       setEmail("");
       setPassword("");
