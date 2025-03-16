@@ -3,6 +3,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
+axios.defaults.withCredentials = true;
 
 function Home() {
   const [todos, setTodos] = useState([]);
@@ -20,6 +21,7 @@ function Home() {
             "Content-Type": "application/json",
           },
         });
+        console.log(response.data.todos);
         setTodos(response.data.todos);
         setError(null);
       } catch (error) {

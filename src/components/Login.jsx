@@ -3,6 +3,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/login.css"; // Import custom styles
+axios.defaults.withCredentials = true;
 
 function Login() {
   const [email, setEmail] = useState("");
