@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles/login.css"; // Import custom styles
 axios.defaults.withCredentials = true;
 
-function Login() {
+function Login({ setToken }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -30,13 +30,9 @@ function Login() {
       console.log(data);
       toast.success(data.message || "Login successful");
       localStorage.setItem("jwt", data.token);
-      console.log("Redirecting to home...");
-      if (localStorage.getItem("jwt")) {
-        console.log("Token stored, redirecting...");
-        navigateTo("/");
-      } else {
-        console.log("Token not stored, redirect failed");
-      }
+      setToken(data.token); // <-- Update token state
+      console.log("Token stored, redirecting...");
+      navigateTo("/"); // Navigate after token update
 
       setEmail("");
       setPassword("");
