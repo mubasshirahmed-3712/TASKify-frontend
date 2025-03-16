@@ -28,11 +28,11 @@ function Login({ setToken }) {
           },
         }
       );
-      console.log(data);
+      // console.log(data);
       toast.success(data.message || "Login successful");
       localStorage.setItem("jwt", data.token);
       setToken(data.token); // <-- Update token state
-      console.log("Token stored, redirecting...");
+      // console.log("Token stored, redirecting...");
       navigateTo("/"); // Navigate after token update
 
       setEmail("");
