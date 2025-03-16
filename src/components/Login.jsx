@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles/login.css"; // Import custom styles
 axios.defaults.withCredentials = true;
 
-function Login({ setToken }) {
+function Login( setToken ) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
