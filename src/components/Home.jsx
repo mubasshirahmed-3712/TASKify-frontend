@@ -14,7 +14,7 @@ function Home() {
     const fetchTodos = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:4001/todo/fetch", {
+        const response = await axios.get("https://taskify-backend-nm7p.onrender.com/todo/fetch", {
           withCredentials: true,
           headers: {
             "Content-Type": "application/json",
@@ -35,7 +35,7 @@ function Home() {
     if (!newTodo) return;
     try {
       const response = await axios.post(
-        "http://localhost:4001/todo/create",
+        "https://taskify-backend-nm7p.onrender.com/todo/create",
         {
           text: newTodo,
           completed: false,
@@ -53,7 +53,7 @@ function Home() {
     const todo = todos.find((t) => t._id === id);
     try {
       const response = await axios.put(
-        `http://localhost:4001/todo/update/${id}`,
+        `https://taskify-backend-nm7p.onrender.com/todo/update/${id}`,
         {
           ...todo,
           completed: !todo.completed,
@@ -68,7 +68,7 @@ function Home() {
 
   const todoDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4001/todo/delete/${id}`, {
+      await axios.delete(`https://taskify-backend-nm7p.onrender.com/todo/delete/${id}`, {
         withCredentials: true,
       });
       setTodos(todos.filter((t) => t._id !== id));
@@ -80,7 +80,7 @@ function Home() {
   const navigateTo = useNavigate();
   const logout = async () => {
     try {
-      await axios.get("http://localhost:4001/user/logout", {
+      await axios.get("https://taskify-backend-nm7p.onrender.com/user/logout", {
         withCredentials: true,
       });
       toast.success("User logged out successfully");
