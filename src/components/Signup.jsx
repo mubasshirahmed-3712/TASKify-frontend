@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
-import "../styles/Signup.css"; // Import custom styles
+import "../styles/signup.css"; // Import custom styles
 
 function Signup() {
   const [username, setUserName] = useState("");
