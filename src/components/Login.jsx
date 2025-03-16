@@ -31,7 +31,12 @@ function Login() {
       toast.success(data.message || "Login successful");
       localStorage.setItem("jwt", data.token);
       console.log("Redirecting to home...");
-      setTimeout(() => navigateTo("/"), 100); // Small delay before navigating
+      if (localStorage.getItem("jwt")) {
+        console.log("Token stored, redirecting...");
+        navigateTo("/");
+      } else {
+        console.log("Token not stored, redirect failed");
+      }
 
       setEmail("");
       setPassword("");
